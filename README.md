@@ -13,7 +13,7 @@ Realizar merge
 * git checkout ##nome## // mudar para a branch principal
 * git merge ##nome## // fazer o merge (não esquecer de realizar o push/async apos atualizar as branchs para subir a alteração)
 
-//
+//  
 Dependencias que foram instaladas.
 * Python 3.13.3
 * autopep8 2025.2.0
