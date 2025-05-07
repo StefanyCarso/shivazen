@@ -1,0 +1,30 @@
+{% extends 'estrutura/base.html' %}
+{% block conteudo %}
+    <div class="container">
+        <div class="left">
+            <h2>Contact</h2>
+            <p><em>Please fill out the form below to send us an email.</em></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <b>E-mail:</b>
+            <p>hello@reallygreatsite.com</p>
+        </div>
+
+        <div class="right">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="NOME COMPLETO:" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="E-MAIL:" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" placeholder="DATA DE NASCIMENTO:" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="MESSAGE"></textarea>
+                </div>
+                <button class="btn" type="submit">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

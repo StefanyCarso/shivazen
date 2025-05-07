@@ -1,13 +1,6 @@
-from django.urls import path
-from app_shivazen import views
-
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    # rota, view responsavel, nome de referencia
-    # path('home/', views.home, name='home'),
-    path('home/', views.home, name='home'),
-
-    path('usuarios/usuario.html', views.usuarios, name='usuarios'),
-    path('usuarios/listausuario.html',
-         views.listausuario, name='listagem_usuarios'),
+    path('', include('app_shivazen.urls')),
 ]

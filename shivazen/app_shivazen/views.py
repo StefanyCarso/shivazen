@@ -1,28 +1,16 @@
 from django.shortcuts import render
-from .models import Usuario
-
-# Create your views here.
-
 
 def home(request):
-    return render(request, 'home/home.html')
+    return render(request, 'inicio/home.html')
 
+def agendaCadastro(request):
+    return render(request, 'agenda/agendamento.html')
 
-def usuarios(request):
-    return render(request, 'usuarios/usuarios.html')
+def agendaContato(request):
+    return render(request, 'agenda/contato.html')
 
+def usuarioLogin(request):
+    return render(request, 'usuario/login.html')
 
-def listausuario(request):
-    # salvar dados da tela para o banco de dados
-    novo_usuario = Usuario()
-    novo_usuario.nome = request.POST.get('nome')
-    novo_usuario.idade = request.POST.get('idade')
-    novo_usuario.save()
-
-    # exibir todos os usuarios cadastrados
-    usuarios = {
-        'usuarios': Usuario.objects.all()
-    }
-
-    # retornar os dados para a pagina de listagem
-    return render(request, 'usuarios/listausuario.html', usuarios)
+def usuarioCadastro(request):
+    return render(request, 'usuario/cadastro.html')  # Corrigi o caminho do template
