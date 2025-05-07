@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debuggando",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/shivazen/manage.py",
+            "args": ["runserver", "--noreload"], 
+            "django": true,
+            "autoAttach": true,
+            "justMyCode": false, 
+            "serverReadyAction": {
+                "pattern": "Starting development server at (https?://\\S+:[0-9]+/)",
+                "uriFormat": "%s",
+                "action": "openExternally" 
+            },
+            "env": {
+                "PYTHONBREAKPOINT": "debugpy.breakpoint" 
+            }
+        }
+    ]
+}
