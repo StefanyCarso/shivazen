@@ -1,6 +1,17 @@
 {% extends 'estrutura/base.html' %}
 {% block conteudo %}
-    <div class="container">
-        <h2>Login</h2>
+  
+<div class="container">
+        <form>
+        <div class="login-container">
+            <p class="login-label" >Login</p>
+            <label  for="email">Email</label>
+                <input type="text" name="email" placeholder="Insira seu E-mail" required autofocus>
+            <label  for="senha">senha</label>
+                <input type="password" name="Senha" placeholder="Insira senha" required autofocus>
+                <button class="button"type="submit">Enviar</button>
+
+        </div>
+    </form>
     </div>
 {% endblock %}
