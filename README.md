@@ -18,4 +18,4 @@ Dependencias que foram instaladas.
 * autopep8 2025.2.0
 * pylance 2025.4.1
 * Django 3.8.1 (Comando: pip install django / verifica instalação django-admin)
-* SQLite Viewer 0.10.5
+* SQLite Viewer 0.10.5 
