@@ -161,30 +161,34 @@ body {
     width: 45%;
   }
 
+   .form-container {
+    background-color: #9e4d16;
+    border-radius: 20px;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
   .form-group {
-    margin-bottom: 15px;
-  }
+  margin-bottom: 15px;
+}
 
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 14px;
-    background-color: #f7e0b6;
-    border: none;
-    font-size: 16px;
-    color: #4a2e00;
-    resize: none;
-  }
+.form-control {
+  width: 100%;
+  padding: 14px;
+  background-color: #f7e0b6;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #4a2e00;
+  resize: none;
+}
 
-  .form-group textarea {
-    height: 100px;
-  }
+.form-control::placeholder {
+  color: #9e7e3b;
+  font-weight: bold;
+}
 
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: #9e7e3b;
-    font-weight: bold;
-  }
 
   .btn {
     display: inline-block;
@@ -205,21 +209,25 @@ body {
 
   .login-container {
     width: 100%;
-    max-width: 400px;
-    height: 500px;
-    padding: 30px;
-    background-color: #d38524;
+    max-width: 450px;
+    padding: 40px;
+    background-color: #9e4d16;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-  }
-  
-  .login-container label {
-    margin-bottom: 8px;
+    align-items: center;
+}
+
+/* Login Label */
+.login-label {
+    margin: 0 0 30px 0;
+    font-size: 40px;
+    color: #271c7a;
+    text-align: center;
     font-weight: bold;
-    color: #fff;
-  }
+    width: 100%;
+}
   
   .login-container input[type="text"],
   .login-container input[type="password"] {
@@ -232,16 +240,7 @@ body {
     font-size: 14px;
   }
 
-  .login-label{
-    margin-bottom: 20px;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #271c7a;
-    padding-right:1000px ;
-    margin-top: 40px;
-    text-align: center;
-
-  }
+  
 
   button {
     background-color: white;
@@ -266,3 +265,4 @@ background-color: #fee1aa ;
 
 
 }
+

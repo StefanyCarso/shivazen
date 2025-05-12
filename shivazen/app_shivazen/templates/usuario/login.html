@@ -2,16 +2,17 @@
 {% block conteudo %}
   
 <div class="container">
-        <form>
+    <form>
         <div class="login-container">
-            <p class="login-label" >Login</p>
-            <label  for="email">Email</label>
-                <input type="text" name="email" placeholder="Insira seu E-mail" required autofocus>
-            <label  for="senha">senha</label>
-                <input type="password" name="Senha" placeholder="Insira senha" required autofocus>
-                <button class="button"type="submit">Enviar</button>
-
+            <p class="login-label">Login</p>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Insira seu E-mail" required autofocus>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Insira sua Senha" required>
+            </div>
+            <button class="btn" type="submit">ENTRAR</button>
         </div>
     </form>
-    </div>
+</div>
 {% endblock %}

@@ -1,6 +1,136 @@
 {% extends 'estrutura/base.html' %}
 {% block conteudo %}
-    <div class="container">
-        <h2>Agendamento</h2>
+    <style>
+       
+
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #9e4d16;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #D9C7B8;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #9e4d16;
+            margin: 30px 0 20px 0;
+        }
+
+        /* Days List */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        li {
+            background-color: #f5d49f;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        li:hover {
+            background-color: #f5d49f;
+            transform: translateY(-2px);
+        }
+
+        
+        .time-table {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .time-slot {
+            background-color: #f5d49f;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .time-slot:hover {
+            background-color: #f5d49f;
+            transform: translateY(-2px);
+        }
+
+        /* Professional Selection */
+        .professional-select {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            background-color: #f5d49f;
+            border: 1px solid #f5d49f;
+            border-radius: 8px;
+            color: #5A4A3F;
+            margin-bottom: 40px;
+            appearance: none;
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 20px;
+        }
+
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            ul {
+                grid-template-columns: 1fr;
+            }
+            
+            .time-table {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>AGENDAMENTOS:</h2>
+    
+    <h3>Dias Disponíveis</h3>
+    <ul>
+        <li>Segunda-feira</li>
+        <li>Terça-feira</li>
+        <li>Quarta-feira</li>
+        <li>Quinta-feira</li>
+        <li>Sexta-feira</li>
+    </ul>
+    
+    <h3>Escolher profissional:</h3>
+    <select class="professional-select">
+        <option>Selecione um profissional</option>
+        <option>Profissional1</option>
+        <option>Profissional2</option>
+        <option>Profissional3</option>
+    </select>
+    
+    <h3>Horários:</h3>
+    <div class="time-table">
+        <div class="time-slot">09:00</div>
+        <div class="time-slot">12:00</div>
+        <div class="time-slot">15:00</div>
+        <div class="time-slot">10:00</div>
+        <div class="time-slot">13:00</div>
+        <div class="time-slot">16:00</div>
+        <div class="time-slot">11:00</div>
+        <div class="time-slot">14:00</div>
+        <div class="time-slot">17:00</div>
     </div>
 {% endblock %}
