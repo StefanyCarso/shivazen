@@ -161,30 +161,34 @@ body {
     width: 45%;
   }
 
+   .form-container {
+    background-color: #9e4d16;
+    border-radius: 20px;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
   .form-group {
-    margin-bottom: 15px;
-  }
+  margin-bottom: 15px;
+}
 
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 14px;
-    background-color: #f7e0b6;
-    border: none;
-    font-size: 16px;
-    color: #4a2e00;
-    resize: none;
-  }
+.form-control {
+  width: 100%;
+  padding: 14px;
+  background-color: #f7e0b6;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #4a2e00;
+  resize: none;
+}
 
-  .form-group textarea {
-    height: 100px;
-  }
+.form-control::placeholder {
+  color: #9e7e3b;
+  font-weight: bold;
+}
 
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: #9e7e3b;
-    font-weight: bold;
-  }
 
   .btn {
     display: inline-block;
@@ -202,3 +206,63 @@ body {
   .btn:hover {
     background-color: #f5d49f;
   }
+
+  .login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background-color: #9e4d16;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Login Label */
+.login-label {
+    margin: 0 0 30px 0;
+    font-size: 40px;
+    color: #271c7a;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  
+
+  button {
+    background-color: white;
+    color: #d38524;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    color: #d38524;
+    background-color: #fee1aa; 
+}
+
+input{
+background-color: #fee1aa ;
+
+
+}
+
