@@ -1,15 +1,20 @@
+[build]
+image = "nixos/nix:2.22.1" 
+
 [phases.setup]
 nixPkgs = [
     "python310", 
-    "python310Packages.pip",
-    "python310Packages.setuptools"
+    "python310Full",  
+    "coreutils",
+    "bash"
 ]
 
 [phases.install]
 cmds = [
-    "python -m pip install --upgrade pip",
+    "python -m ensurepip --upgrade",
+    "python -m pip install --upgrade pip setuptools",
     "pip install -r requirements.txt"
 ]
 
 [start]
-cmd = "python manage.py runserver 0.0.0.0:$PORT"
+cmd = "gunicorn shivazen.wsgi:application --bind 0.0.0.0:$PORT"
