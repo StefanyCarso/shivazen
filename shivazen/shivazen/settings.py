@@ -122,6 +122,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # Desenvolvimento
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Produção
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = '/media/'  # Para uploads de usuários
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
