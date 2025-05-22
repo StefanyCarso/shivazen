@@ -1,0 +1,21 @@
+{% extends 'estrutura/base.html' %}
+{% block conteudo %}
+    {% csrf_token %}
+    <h2>Login do Usuário</h2>
+    <form action="/login" method="POST">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required placeholder="Insira seu E-mail">
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <label for="tipoUsuario">Entrar como:</label>
+      <select id="tipoUsuario" name="tipoUsuario" required>
+        <option value="">Selecione...</option>
+        <option value="cliente">Cliente</option>
+        <option value="administrador">Administrador</option>
+      </select>
+
+      <button type="submit">Entrar</button>
+    </form>
+ {% endblock %}

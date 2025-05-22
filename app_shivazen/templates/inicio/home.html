@@ -1,13 +1,120 @@
 {% extends 'estrutura/base.html' %}
+{% load static %}
+
 {% block conteudo %}
-    {% csrf_token %}
-      <div style="text-align: center;" class="container">
-        <h1>Hello, world!</h1>
-        <div class="info">
-          <h2>Clínica de Estética Avançada</h2>
-          <p>
-            Somos especialistas e oferecemos mais de 20 tratamentos faciais e corporais, como bioestimuladores de colágeno, preenchimento labial e facial, limpezas, massagens e muito mais.
-          </p>
-        </div>
-      </div>
- {% endblock %}
+{% csrf_token %}
+
+<style>
+  .pagina-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fdf6f0;
+    padding: 40px 20px;
+  }
+
+  .imagem-principal {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .imagem-principal img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+  }
+
+  .imagem-principal button {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    background-color: #b48c4c;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .texto-central {
+    margin-top: 30px;
+    max-width: 800px;
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .texto-central h2 {
+    color: #8b5c00;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .texto-central p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #5c4b2b;
+  }
+
+  .imagens-pequenas {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-start;
+    max-width: 800px;
+    padding: 0 15px;
+  }
+
+  .imagens-pequenas img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .imagem-principal button {
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      width: calc(100% - 20px);
+    }
+
+    .imagens-pequenas {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .imagens-pequenas img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+</style>
+
+<section class="pagina-inicial">
+  <div class="imagem-principal">
+    <img src="{% static 'assents/hero-soap.jpg' %}" alt="Sabonetes artesanais">
+    <button>AGENDE SEU PROCEDIMENTO</button>
+  </div>
+
+  <div class="texto-central">
+    <h2>Clínica de Estética Avançada</h2>
+    <p>
+      SOMOS ESPECIALISTAS E OFERECEMOS MAIS DE 20 TRATAMENTOS FACIAIS E CORPORAIS, COMO BIOESTIMULADORES DE COLÁGENO, PREENCHIMENTO LABIAL E FACIAL, LIMPEZAS, MASSAGENS E MUITO MAIS.
+    </p>
+  </div>
+
+  <div class="imagens-pequenas">
+    <img src="{% static 'assents/tratamento1.jpg' %}" alt="Tratamento facial">
+    <img src="{% static 'assents/sabonetes.jpg' %}" alt="Sabonetes com aveia">
+    <img src="{% static 'assents/tratamento2.jpg' %}" alt="Aplicação estética">
+  </div>
+</section>
+
+{% endblock %}
