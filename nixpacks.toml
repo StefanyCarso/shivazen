@@ -1,10 +1,9 @@
 [build]
-image = "nixos/nix:2.22.1" 
+image = "nixos/nix:2.22.1"
 
 [phases.setup]
 nixPkgs = [
-    "python310", 
-    "python310Full",  
+    "python310Full",  # ou "python310", mas **não os dois**
     "coreutils",
     "bash"
 ]
