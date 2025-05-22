@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiva Zen - Clínica de Estética Avançada</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5d49f;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      width: 100%;
+      position: relative;
+    }
+
+    .hero-container {
+      position: relative;
+      width: 100%;
+      max-height: 500px;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      border-bottom: 5px solid #E48A2A;
+    }
+
+    .btn-agendar {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px 25px;
+      background-color: #E48A2A;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-agendar:hover {
+      background-color: #d3791e;
+    }
+
+    .intro {
+      background-color: #fff;
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .intro-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .intro-text h2 {
+      color: #4B3A9B;
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      font-size: 16px;
+      color: #333;
+      max-width: 700px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery-img {
+      width: 280px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .gallery-img {
+        width: 90%;
+        height: auto;
+      }
+
+      .btn-agendar {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <section class="hero" id="inicio">
+      <div class="hero-container">
+        <img src="imagens/hero-soap.jpg" alt="Banner Shiva Zen" class="hero-img" />
+        <button class="btn-agendar">Agende Seu Procedimento</button>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="intro-content">
+        <div class="intro-text">
+          <h2>Clínica de Estética Avançada</h2>
+          <p>
+            Somos especialistas e oferecemos mais de 20 tratamentos faciais e corporais,
+            como bioestimuladores de colágeno, preenchimento labial e facial, limpezas,
+            massagens e muito mais.
+          </p>
+        </div>
+        <div class="gallery">
+          <img src="imagens/tratamento1.jpg" alt="Tratamento Facial" class="gallery-img" />
+          <img src="imagens/sabonetes.jpg" alt="Produtos de Estética" class="gallery-img" />
+          <img src="imagens/tratamento2.jpg" alt="Massagem Facial" class="gallery-img" />
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

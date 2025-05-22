@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivazen || Editar Profissionais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5d49f ;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #4B3A9B;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #4B3A9B;
+    }
+    select, input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    button {
+      flex: 1;
+      margin: 5px;
+      padding: 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+    .editar { background-color: #E48A2A; }
+    .consultar { background-color: #E48A2A; }
+    .excluir { background-color: #D43F3F; }
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Gerenciar Esteticistas</h2>
+
+    <!-- Seleção do profissional -->
+    <label for="profissional">Selecionar Profissional:</label>
+    <select id="profissional" name="profissional" required>
+      <option value="">-- Escolha um profissional --</option>
+      <option value="1">Amanda Souza</option>
+      <option value="2">Bruna Oliveira</option>
+      <option value="3">Carlos Lima</option>
+      <!-- Estes valores devem ser preenchidos dinamicamente via backend -->
+    </select>
+
+    <!-- Ações disponíveis -->
+    <div class="buttons">
+      <button class="consultar" onclick="consultarProfissional()">Consultar</button>
+      <button class="editar" onclick="editarProfissional()">Editar</button>
+      <button class="excluir" onclick="excluirProfissional()">Excluir</button>
+    </div>
+
+    <!-- Área para exibir ou editar dados (opcional, inicialmente escondida) -->
+    <div id="dadosProfissional" style="margin-top: 30px; display: none;">
+      <h3>Dados do Profissional</h3>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" disabled>
+
+      <label for="contato">Contato:</label>
+      <input type="text" id="contato" disabled>
+
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao" disabled></textarea>
+
+      <label for="disponibilidade">Disponibilidade:</label>
+      <input type="text" id="disponibilidade" disabled>
+
+      <button class="editar" style="margin-top: 20px;" onclick="salvarEdicao()">Salvar Alterações</button>
+    </div>
+  </div>
+
+  <script>
+    function consultarProfissional() {
+      const dados = document.getElementById("dadosProfissional");
+      dados.style.display = "block";
+
+      // Exemplo fixo: simular consulta de dados
+      document.getElementById("nome").value = "Amanda Souza";
+      document.getElementById("contato").value = "(11) 91234-5678";
+      document.getElementById("descricao").value = "Especialista em limpeza de pele e massagem relaxante.";
+      document.getElementById("valor").value = "150";
+      document.getElementById("disponibilidade").value = "Segunda a Sexta";
+    }
+
+    function editarProfissional() {
+      consultarProfissional(); // Carrega dados
+      // Ativa campos para edição
+      document.getElementById("nome").disabled = false;
+      document.getElementById("contato").disabled = false;
+      document.getElementById("descricao").disabled = false;
+      document.getElementById("valor").disabled = false;
+      document.getElementById("disponibilidade").disabled = false;
+    }
+
+    function salvarEdicao() {
+      alert("Alterações salvas com sucesso!");
+      // Aqui você conectaria com backend para atualizar os dados no banco
+    }
+
+    function excluirProfissional() {
+      const confirmacao = confirm("Tem certeza que deseja excluir este profissional?");
+      if (confirmacao) {
+        alert("Profissional excluído com sucesso!");
+        // Aqui também iria uma chamada para backend para remover os dados
+      }
+    }
+  </script>
+
+</body>
+</html>

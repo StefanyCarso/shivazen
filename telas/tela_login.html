@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivazen || Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5d49f;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #4B3A9B;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #4B3A9B;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #E48A2A;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d3791e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login do Usuário</h2>
+    <form action="/login" method="POST">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required placeholder="Insira seu E-mail">
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <label for="tipoUsuario">Entrar como:</label>
+      <select id="tipoUsuario" name="tipoUsuario" required>
+        <option value="">Selecione...</option>
+        <option value="cliente">Cliente</option>
+        <option value="administrador">Administrador</option>
+      </select>
+
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+</body>
+</html>
