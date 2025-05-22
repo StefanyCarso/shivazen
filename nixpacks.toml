@@ -3,7 +3,7 @@ image = "nixos/nix:2.22.1"
 
 [phases.setup]
 nixPkgs = [
-    "python310Full",  # ou "python310", mas **não os dois**
+    "python310.withPackages (ps: with ps; [ ])",
     "coreutils",
     "bash"
 ]
