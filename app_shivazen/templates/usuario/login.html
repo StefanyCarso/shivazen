@@ -1,18 +1,26 @@
 {% extends 'estrutura/base.html' %}
 {% block conteudo %}
-  
-<div class="container">
-    <form>
-        <div class="login-container">
-            <p class="login-label">Login</p>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Insira seu E-mail" required autofocus>
-            </div>
-            <div class="form-group">
-                <input type="password" name="password" placeholder="Insira sua Senha" required>
-            </div>
-            <button class="btn" type="submit">ENTRAR</button>
+    {% csrf_token %}
+    <div class="container">
+        <div class="form-container">
+            <h3 class="login-label">Acesso ao Sistema</h3>
+            <form id="login-form" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="login">Login (E-mail ou CPF):</label>
+                    <input type="text" id="login" name="login" class="form-control" placeholder="Digite seu e-mail ou CPF" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" class="form-control" placeholder="Digite sua senha" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-login">Entrar</button>
+                </div>
+                <div class="form-group">
+                    <a href="{% url 'shivazen:usuarioCadastro' %}" class="btn-login">Não tenho cadastro - Criar Conta</a>
+                </div>
+            </form>
         </div>
-    </form>
-</div>
+    </div>
 {% endblock %}
