@@ -71,3 +71,67 @@ html, body {
 .footer .social-icons img:hover {
   transform: scale(1.1);
 }
+
+/* Estilos adicionais para o template de login */
+
+.hero-image {
+  max-height: 9em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.login-card {
+  background-color: #f7e0b6;
+  border-radius: 10px;
+  border: 1px solid rgb(219, 185, 159);
+}
+
+.login-title {
+  color: #8b5c00;
+  font-weight: bold;
+}
+
+.input-custom {
+  border: 1px solid #b48c4c !important;
+  background-color: white !important;
+  padding: 10px 15px !important;
+}
+
+.input-custom:focus {
+  border-color: #8b5c00 !important;
+  box-shadow: 0 0 0 0.25rem rgba(180, 140, 76, 0.25) !important;
+}
+
+.btn-login {
+  background-color: #b48c4c;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #8b5c00;
+  transform: translateY(-2px);
+}
+
+.btn-register {
+  background-color: #f9f3ef;
+  color: #b48c4c;
+  border: 1px solid #b48c4c !important;
+  padding: 10px;
+  font-weight: bold !important;
+  transition: all 0.3s !important;
+}
+
+.btn-register:hover {
+  background-color: #f0e6dd;
+  color: #8b5c00;
+  border-color: #8b5c00;
+}
+
+  .container-login {
+    max-width: 800px;
+    padding: 0 20px;
+  }

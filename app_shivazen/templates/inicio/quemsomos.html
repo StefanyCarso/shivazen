@@ -2,48 +2,61 @@
 {% load static %}
 
 {% block conteudo %}
-  {% csrf_token %}
-  <link rel="stylesheet" href="{% static 'css/telas.css' %}">
+<link rel="stylesheet" href="{% static 'css/telas.css' %}">
 
-  <div class="container sobre-nos">
-    <div class="info text-center mb-5">
-      <h2>Clínica de Estética Avançada</h2>
-      <p>
-        Na Shiva Zen, somos especialistas em tratamentos estéticos faciais que melhoram sua pele com técnicas avançadas, promovendo luminosidade e rejuvenescimento natural.
-      </p>
+<div class="container sobre-nos py-5">
+  <!-- Cabeçalho Hero -->
+  <header class="hero-header text-center mb-5">
+    <h1 class="display-4 mb-3">Shiva Zen</h1>
+    <h2 class="mb-4">Clínica de Estética Avançada</h2>
+    <p class="lead mx-auto" style="max-width: 800px;">
+      Na Shiva Zen, somos especialistas em tratamentos estéticos faciais e corporais que melhoram sua pele com técnicas avançadas, promovendo luminosidade e rejuvenescimento natural.
+    </p>
+  </header>
+
+  <!-- Tratamentos Faciais -->
+  <section class="treatment-section mb-5">
+    <div class="treatment-header text-center mb-4">
+      <h3 class="section-title">Tratamentos Estético Faciais</h3>
+      <div class="divider mx-auto"></div>
     </div>
-
-    <section class="tratamentos-faciais mb-4">
-      <h3>Tratamentos Estético Facial</h3>
-      <div class="texto-tratamentos">
-        <p><strong>Bioestimuladores de colágeno:</strong> Os bioestimuladores de colágeno rejuvenescem sua pele, aumentando a firmeza e elasticidade e reduzindo rugas.</p>
-        <p><strong>Preenchimento facial:</strong> Restaura volume e contorno, suavizando rugas e linhas, deixando sua pele mais jovem e firme.</p>
-        <p><strong>Skinbooster:</strong> Hidrata profundamente a pele, melhorando a textura e luminosidade, deixando-a mais suave e revitalizada.</p>
-        <p><strong>Toxina botulínica:</strong> Suaviza rugas e linhas de expressão, proporcionando uma aparência mais jovem e relaxada.</p>
-        <p><strong>Preenchimento labial:</strong> Aumenta o volume e define o contorno dos lábios, deixando-os mais cheios e simétricos.</p>
-        <p><strong>Fios de PDO:</strong> Aumenta sustentação natural da pele com segurança, sem cirurgia invasiva, promovendo rejuvenescimento duradouro.</p>
-        <p><strong>Redução de papada:</strong> Transforme seu perfil com um método não invasivo, realçando sua beleza facial de forma segura.</p>
-        <p><strong>Limpeza de pele:</strong> Renove seu rosto com um tratamento suave e revitalizante para uma aparência radiante e saudável.</p>
-        <p><strong>Microagulhamento:</strong> Estimula a produção de colágeno e melhora a textura da pele de forma eficaz e segura.</p>
-        <p><strong>Peeling de diamante:</strong> Renove sua pele com um tratamento suave e eficaz para uma aparência radiante e rejuvenescida.</p>
-        <p><strong>Peeling químico:</strong> Revitalize sua pele, reduzindo manchas e promovendo uma aparência renovada e saudável.</p>
-        <p><strong>Intradermoterapia capilar:</strong> Aplicação de vitaminas e ativos diretamente no couro cabeludo, controlando e interrompendo a queda dos fios.</p>
+    
+    <div class="row">
+      {% for tratamento in tratamentos_faciais %}
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="treatment-card h-100">
+          <div class="treatment-icon mb-3">
+            <i class="fas fa-spa"></i>
+          </div>
+          <h4 class="treatment-name">{{ tratamento.nome }}</h4>
+          <p class="treatment-description">{{ tratamento.descricao }}</p>
+        </div>
       </div>
-    </section>
+      {% endfor %}
+    </div>
+  </section>
 
-    <section class="tratamentos-corporais">
-      <h3>Tratamentos Estético Corporal</h3>
-      <div class="texto-tratamentos">
-        <p><strong>Drenagem linfática manual:</strong> Reduz inchaço e melhora a circulação para uma pele mais saudável e revitalizada.</p>
-        <p><strong>Endermoterapia:</strong> Redução de celulite e firmeza da pele de forma eficaz e não invasiva, melhorando sua aparência.</p>
-        <p><strong>Glúteo MAX:</strong> Fortalece e modela os glúteos com resultados visíveis e duradouros através de exercícios específicos.</p>
-        <p><strong>Hidrolipoclasia não Aspirativa:</strong> Reduz medidas localizadas de forma segura e eficaz, remodelando o corpo sem cirurgia invasiva.</p>
-        <p><strong>Eletroestimulação:</strong> Tonifica músculos e melhora a definição corporal com segurança e eficácia, sem esforço excessivo.</p>
-        <p><strong>Intradermoterapia corporal:</strong> Técnica minimamente invasiva com injeções de medicamentos, vitaminas e minerais para reduzir medidas e flacidez.</p>
-        <p><strong>Massagem modeladora:</strong> Define contornos corporais, reduz medidas e melhora a textura da pele de forma eficaz e relaxante.</p>
-        <p><strong>PEIM:</strong> Escleroterapia para microvasos trata vasinhos de forma segura, melhorando a estética das pernas minimamente invasiva.</p>
-        <p><strong>Radiofrequência:</strong> Estimula colágeno, suaviza rugas e melhora a firmeza da pele de forma não invasiva e eficaz.</p>
+  <!-- Tratamentos Corporais -->
+  <section class="treatment-section">
+    <div class="treatment-header text-center mb-4">
+      <h3 class="section-title">Tratamentos Estético Corporal</h3>
+      <div class="divider mx-auto"></div>
+    </div>
+    
+    <div class="row">
+      {% for tratamento in tratamentos_corporais %}
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="treatment-card h-100">
+          <div class="treatment-icon mb-3">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h4 class="treatment-name">{{ tratamento.nome }}</h4>
+          <p class="treatment-description">{{ tratamento.descricao }}</p>
+        </div>
       </div>
-    </section>
-  </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
 {% endblock %}

@@ -16,7 +16,20 @@ def usuarioCadastro(request):
     return render(request, 'usuario/cadastro.html')  
 
 def quemsomos(request):
-    return render(request, 'inicio/quemsomos.html') 
+    tratamentos_faciais = [
+        {'nome': 'Bioestimuladores de colágeno', 'descricao': 'Rejuvenesce sua pele, aumentando a firmeza e elasticidade e reduzindo rugas.'},
+        # Adicione todos os outros tratamentos faciais aqui
+    ]
+    
+    tratamentos_corporais = [
+        {'nome': 'Drenagem linfática manual', 'descricao': 'Reduz inchaço e melhora a circulação para uma pele mais saudável e revitalizada.'},
+        # Adicione todos os outros tratamentos corporais aqui
+    ]
+    
+    return render(request, 'inicio/quemsomos.html', {
+        'tratamentos_faciais': tratamentos_faciais,
+        'tratamentos_corporais': tratamentos_corporais
+    })
 
 def prontuarioconsentimento(request):
     return render(request, 'telas/ProntuarioConsentimento.html') 

@@ -1,43 +1,69 @@
 {% extends 'estrutura/base.html' %}
+{% load static %}
+
 {% block conteudo %}
-<div class="container">
-    <div class="section-text">
-        <h2>Agendamentos:</h2>
+<link rel="stylesheet" href="{% static 'css/telas.css' %}">
+
+<div class="container booking-container py-5">
+    <!-- Cabeçalho -->
+    <div class="booking-header text-center mb-5">
+        <h2 class="booking-title">Agende seu Procedimento</h2>
+        <div class="divider mx-auto"></div>
     </div>
 
-    <div class="form-group">
-        <h3>Dias Disponíveis</h3>
-        <ul>
-            <li>Segunda-feira</li>
-            <li>Terça-feira</li>
-            <li>Quarta-feira</li>
-            <li>Quinta-feira</li>
-            <li>Sexta-feira</li>
-        </ul>
-    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Dias Disponíveis -->
+            <div class="booking-card mb-4 p-4">
+                <h3 class="section-subtitle mb-3">
+                    <i class="fas fa-calendar-alt me-2"></i> Dias Disponíveis
+                </h3>
+                <div class="days-container">
+                    <div class="day-pill">Segunda</div>
+                    <div class="day-pill">Terça</div>
+                    <div class="day-pill">Quarta</div>
+                    <div class="day-pill">Quinta</div>
+                    <div class="day-pill">Sexta</div>
+                </div>
+            </div>
 
-    <div class="form-group">
-        <h3>Escolher profissional:</h3>
-        <select class="form-control professional-select">
-            <option>Selecione um profissional</option>
-            <option>Profissional1</option>
-            <option>Profissional2</option>
-            <option>Profissional3</option>
-        </select>
-    </div>
+            <!-- Escolher Profissional -->
+            <div class="booking-card mb-4 p-4">
+                <h3 class="section-subtitle mb-3">
+                    <i class="fas fa-user-md me-2"></i> Escolha seu Profissional
+                </h3>
+                <select class="form-select professional-select">
+                    <option selected>Selecione um profissional</option>
+                    <option>Dra. Ana Silva</option>
+                    <option>Dr. Carlos Mendes</option>
+                    <option>Dra. Juliana Costa</option>
+                </select>
+            </div>
 
-    <div class="form-group">
-        <h3>Horários:</h3>
-        <div class="time-table">
-            <div class="time-slot">09:00</div>
-            <div class="time-slot">12:00</div>
-            <div class="time-slot">15:00</div>
-            <div class="time-slot">10:00</div>
-            <div class="time-slot">13:00</div>
-            <div class="time-slot">16:00</div>
-            <div class="time-slot">11:00</div>
-            <div class="time-slot">14:00</div>
-            <div class="time-slot">17:00</div>
+            <!-- Horários Disponíveis -->
+            <div class="booking-card p-4">
+                <h3 class="section-subtitle mb-3">
+                    <i class="fas fa-clock me-2"></i> Horários Disponíveis
+                </h3>
+                <div class="time-grid">
+                    <div class="time-slot">09:00</div>
+                    <div class="time-slot">10:00</div>
+                    <div class="time-slot">11:00</div>
+                    <div class="time-slot">12:00</div>
+                    <div class="time-slot">13:00</div>
+                    <div class="time-slot">14:00</div>
+                    <div class="time-slot">15:00</div>
+                    <div class="time-slot">16:00</div>
+                    <div class="time-slot">17:00</div>
+                </div>
+            </div>
+
+            <!-- Botão de Confirmação -->
+            <div class="text-center mt-4">
+                <a href="{% url 'shivazen:usuarioLogin' %}" class="btn-confirm">
+                  Confirmar Agendamento <i class="fas fa-check-circle ms-2"></i>
+                </a>
+            </div>
         </div>
     </div>
 </div>
