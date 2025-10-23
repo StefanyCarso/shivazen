@@ -1,0 +1,21 @@
+{% extends 'estrutura/baserodape.html' %}
+{% load static %}
+
+{% block conteudo %}
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-overlay">
+      <div class="hero-content text-center">
+        <a href="{% url 'shivazen:inicio' %}">
+            <img src="{% static 'assents/LogoCompletaSemFundo.png' %}" alt="Shiva Zen" class="login-logo">
+        </a>
+        <h5 class="hero-title">Termo de Consentimento</h5>
+      </div>
+    </div>
+  </div>
+</section>
+<p>
+Cursus senectus sit ultricies maecenas, enim vitae non ultrices aptent cras dis sodales? Adipiscing elit gravida rutrum neque nec donec interdum risus nascetur. Nulla tincidunt lectus integer natoque fusce et justo aptent accumsan sociosqu ac aptent! Posuere eleifend dapibus est nunc dui. Viverra nullam tempor proin nunc ac venenatis sociosqu porttitor! Nisl nunc porta risus. Senectus nostra gravida euismod leo ultrices. Nunc dolor nascetur pharetra accumsan dolor. Blandit senectus orci eros. Fringilla molestie euismod lacinia posuere odio nascetur. Nascetur suspendisse hac bibendum dictum tristique ad. Odio arcu duis aliquet. Volutpat potenti placerat sollicitudin nullam cras bibendum ullamcorper dignissim, magnis.
+</p>
+</div>
+{% endblock %}

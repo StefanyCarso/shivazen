@@ -4,12 +4,6 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'inicio/home.html')
 
-def termosUso(request):
-    return render(request, 'inicio/termosUso.html')
-
-def politicaPrivacidade(request):
-    return render(request, 'inicio/politicaPrivacidade.html')
-
 def quemsomos(request):
     tratamentos_faciais = [
         {'nome': 'Bioestimuladores de colágeno', 'descricao': 'Rejuvenesce sua pele, aumentando a firmeza e elasticidade e reduzindo rugas.'},
@@ -58,3 +52,15 @@ def login(request):
 
 def painel(request):
     return render(request, 'telas/tela_painel.html') 
+
+
+#Termos 
+
+def termosUso(request):
+    return render(request, 'termos/termosUso.html')
+
+def politicaPrivacidade(request):
+    return render(request, 'termos/politicaPrivacidade.html')
+
+def termosconsentimento(request):
+    return render(request, 'termos/termosconsentimento.html')

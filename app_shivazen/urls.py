@@ -8,8 +8,6 @@ app_name = 'shivazen'
 urlpatterns = [
 #inicio
     path('', views.home, name='inicio'),
-    path('inicio/quemsomos/', views.quemsomos, name='quemsomos'),
-    path('inicio/termosUso/', views.termosUso, name='termosUso'),
     path('inicio/politicaPrivacidade/', views.politicaPrivacidade, name='politicaPrivacidade'),
 #usuario
     path('usuario/cadastro/', views.usuarioCadastro, name='usuarioCadastro'),
@@ -18,6 +16,10 @@ urlpatterns = [
 #agenda
     path('agenda/agendamento/', views.agendaCadastro, name='agendaCadastro'),
     path('agenda/contato/', views.agendaContato, name='agendaContato'),
+#termos
+    path('termos/quemsomos/', views.quemsomos, name='quemsomos'),
+    path('termos/termosUso/', views.termosUso, name='termosUso'),
+    path('termos/termosconsentimento/', views.termosconsentimento, name='termosconsentimento'),
 #telas
     path('telas/ProntuarioConsentimento/', views.prontuarioconsentimento, name='prontuarioconsentimento'),
     path('telas/tela_cadastro_profissional/', views.profissionalCadastro, name='profissionalCadastro'),
