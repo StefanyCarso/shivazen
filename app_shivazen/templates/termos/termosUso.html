@@ -2,6 +2,63 @@
 {% load static %}
 
 {% block conteudo %}
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        
+        .termos-uso {
+            text-align: justify;
+        }
+        
+        .termos-uso h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        .termos-uso h2 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .termos-uso p {
+            margin-bottom: 15px;
+        }
+        
+        .termos-uso ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .termos-uso li {
+            margin-bottom: 5px;
+        }
+        
+        .termos-uso strong {
+            color: #2c3e50;
+        }
+        
+        .py-5 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    </style>
 <section class="hero-section">
   <div class="hero-container">
     <div class="hero-overlay">
@@ -20,13 +77,40 @@
 </section>
 
 <div class="container py-5">
-<p style="text-align: justify;"><br /><strong>1. Aceita&ccedil;&atilde;o dos Termos</strong><br />Ao utilizar os servi&ccedil;os, agendar procedimentos ou acessar o site/aplicativo da Shivazen, o cliente concorda integralmente com estes Termos de Uso e com a Pol&iacute;tica de Privacidade da Cl&iacute;nica. Caso n&atilde;o concorde com qualquer disposi&ccedil;&atilde;o, n&atilde;o deve utilizar os servi&ccedil;os ou o acesso digital.</p>
-<p style="text-align: justify;"><strong>2. Servi&ccedil;os</strong><br />2.1. A Shivazen oferece servi&ccedil;os de est&eacute;tica facial, corporal e terapias de bem-estar, detalhados em seu cat&aacute;logo de servi&ccedil;os.<br />2.2. A realiza&ccedil;&atilde;o de qualquer procedimento est&aacute; condicionada &agrave; pr&eacute;via avalia&ccedil;&atilde;o profissional, &agrave; aus&ecirc;ncia de contraindica&ccedil;&otilde;es e &agrave; assinatura de um Termo de Consentimento Informado espec&iacute;fico para o tratamento.</p>
-<p style="text-align: justify;"><br /><strong>3. Agendamento e Cancelamento</strong><br />3.1. Agendamento: Os agendamentos podem ser realizados por telefone, presencialmente, ou por canais digitais (se aplic&aacute;vel), sujeitos &agrave; disponibilidade de hor&aacute;rios e profissionais.<br />3.2. Toler&acirc;ncia de Atraso: &Eacute; solicitada pontualidade. Em caso de atraso superior a [Definir Tempo, ex: 15] minutos, o procedimento poder&aacute; ser cancelado, remarcado ou ter seu tempo reduzido para n&atilde;o prejudicar os atendimentos subsequentes.<br />3.3. Cancelamento/Remarca&ccedil;&atilde;o: Solicita-se que o cliente comunique o cancelamento ou a necessidade de remarca&ccedil;&atilde;o com anteced&ecirc;ncia m&iacute;nima de [Definir Tempo, ex: 24] horas. O n&atilde;o comparecimento (No-Show) sem aviso pr&eacute;vio poder&aacute; implicar na perda da sess&atilde;o/valor pago (em caso de pacotes).</p>
-<p style="text-align: justify;"><br /><strong>4. Pagamento e Valores</strong><br />4.1. Os valores dos servi&ccedil;os e as formas de pagamento aceitas est&atilde;o dispon&iacute;veis na cl&iacute;nica e podem ser consultados no momento do agendamento.<br />4.2. A Shivazen se reserva o direito de reajustar os valores dos servi&ccedil;os a qualquer momento, informando previamente o cliente.</p>
-<p style="text-align: justify;"><br /><strong>5. Responsabilidades do Cliente</strong><br />5.1. O cliente deve fornecer informa&ccedil;&otilde;es de sa&uacute;de completas, verdadeiras e atualizadas na ficha de anamnese e em qualquer etapa da avalia&ccedil;&atilde;o e tratamento.<br />5.2. O cliente deve seguir rigorosamente todas as instru&ccedil;&otilde;es e cuidados pr&eacute; e p&oacute;s-procedimento recomendados pelo profissional da Shivazen.<br />5.3. O cliente &eacute; respons&aacute;vel por relatar imediatamente qualquer rea&ccedil;&atilde;o adversa, intercorr&ecirc;ncia ou desconforto ap&oacute;s o procedimento.<br />5.4. &Eacute; proibida a entrada de animais (exceto c&atilde;es-guia) e o consumo de bebidas alco&oacute;licas ou uso de subst&acirc;ncias il&iacute;citas nas depend&ecirc;ncias da cl&iacute;nica.</p>
-<p style="text-align: justify;"><br /><strong>6. Resultados e Garantia</strong><br />6.1. O cliente est&aacute; ciente de que os resultados dos procedimentos est&eacute;ticos s&atilde;o subjetivos, variam de pessoa para pessoa e dependem de m&uacute;ltiplos fatores (como metabolismo, tipo de pele, ades&atilde;o aos cuidados p&oacute;s-tratamento, etc.).<br />6.2. A Shivazen compromete-se com o uso de t&eacute;cnicas, equipamentos e produtos de qualidade e com a atua&ccedil;&atilde;o de profissionais habilitados, mas n&atilde;o oferece garantia de resultados espec&iacute;ficos.</p>
-<p style="text-align: justify;"><br /><strong>7. Uso de Imagem e Privacidade (LGPD)</strong><br />7.1. A capta&ccedil;&atilde;o, uso e divulga&ccedil;&atilde;o de imagens do cliente para fins de registro profissional, divulga&ccedil;&atilde;o ou ensino (antes e depois) somente ocorrer&aacute; mediante autoriza&ccedil;&atilde;o expressa em Termo de Consentimento para Uso de Imagem &agrave; parte, em conformidade com a Lei Geral de Prote&ccedil;&atilde;o de Dados (LGPD).<br />7.2. O tratamento dos dados pessoais do cliente &eacute; regido pela Pol&iacute;tica de Privacidade da Shivazen.</p>
-<p style="text-align: justify;"><br /><strong>8. Disposi&ccedil;&otilde;es Finais</strong><br />8.1. Estes Termos de Uso entram em vigor na data de sua publica&ccedil;&atilde;o.<br />8.2. Fica eleito o foro da Comarca de [Inserir Cidade/Estado] para dirimir quaisquer d&uacute;vidas ou lit&iacute;gios oriundos destes Termos, renunciando a qualquer outro, por mais privilegiado que seja.</p>
-</div>
+        <div class="termos-uso">
+            <h2>1. Aceitação dos Termos</h2>
+            <p>Ao utilizar os serviços, agendar procedimentos ou acessar o site/aplicativo da Shivazen, o cliente concorda integralmente com estes Termos de Uso e com a Política de Privacidade da Clínica. Caso não concorde com qualquer disposição, não deve utilizar os serviços ou o acesso digital.</p>
+            
+            <h2>2. Serviços</h2>
+            <p><strong>2.1.</strong> A Shivazen oferece serviços de estética facial, corporal e terapias de bem-estar, detalhados em seu catálogo de serviços.</p>
+            <p><strong>2.2.</strong> A realização de qualquer procedimento está condicionada à prévia avaliação profissional, à ausência de contraindicações e à assinatura de um Termo de Consentimento Informado específico para o tratamento.</p>
+            
+            <h2>3. Agendamento e Cancelamento</h2>
+            <p><strong>3.1. Agendamento:</strong> Os agendamentos podem ser realizados por telefone, presencialmente, ou por canais digitais (se aplicável), sujeitos à disponibilidade de horários e profissionais.</p>
+            <p><strong>3.2. Tolerância de Atraso:</strong> É solicitada pontualidade. Em caso de atraso superior a [Definir Tempo, ex: 15] minutos, o procedimento poderá ser cancelado, remarcado ou ter seu tempo reduzido para não prejudicar os atendimentos subsequentes.</p>
+            <p><strong>3.3. Cancelamento/Remarcação:</strong> Solicita-se que o cliente comunique o cancelamento ou a necessidade de remarcação com antecedência mínima de [Definir Tempo, ex: 24] horas. O não comparecimento (No-Show) sem aviso prévio poderá implicar na perda da sessão/valor pago (em caso de pacotes).</p>
+            
+            <h2>4. Pagamento e Valores</h2>
+            <p><strong>4.1.</strong> Os valores dos serviços e as formas de pagamento aceitas estão disponíveis na clínica e podem ser consultados no momento do agendamento.</p>
+            <p><strong>4.2.</strong> A Shivazen se reserva o direito de reajustar os valores dos serviços a qualquer momento, informando previamente o cliente.</p>
+            
+            <h2>5. Responsabilidades do Cliente</h2>
+            <p><strong>5.1.</strong> O cliente deve fornecer informações de saúde completas, verdadeiras e atualizadas na ficha de anamnese e em qualquer etapa da avaliação e tratamento.</p>
+            <p><strong>5.2.</strong> O cliente deve seguir rigorosamente todas as instruções e cuidados pré e pós-procedimento recomendados pelo profissional da Shivazen.</p>
+            <p><strong>5.3.</strong> O cliente é responsável por relatar imediatamente qualquer reação adversa, intercorrência ou desconforto após o procedimento.</p>
+            <p><strong>5.4.</strong> É proibida a entrada de animais (exceto cães-guia) e o consumo de bebidas alcoólicas ou uso de substâncias ilícitas nas dependências da clínica.</p>
+            
+            <h2>6. Resultados e Garantia</h2>
+            <p><strong>6.1.</strong> O cliente está ciente de que os resultados dos procedimentos estéticos são subjetivos, variam de pessoa para pessoa e dependem de múltiplos fatores (como metabolismo, tipo de pele, adesão aos cuidados pós-tratamento, etc.).</p>
+            <p><strong>6.2.</strong> A Shivazen compromete-se com o uso de técnicas, equipamentos e produtos de qualidade e com a atuação de profissionais habilitados, mas não oferece garantia de resultados específicos.</p>
+            
+            <h2>7. Uso de Imagem e Privacidade (LGPD)</h2>
+            <p><strong>7.1.</strong> A captação, uso e divulgação de imagens do cliente para fins de registro profissional, divulgação ou ensino (antes e depois) somente ocorrerá mediante autorização expressa em Termo de Consentimento para Uso de Imagem à parte, em conformidade com a Lei Geral de Proteção de Dados (LGPD).</p>
+            <p><strong>7.2.</strong> O tratamento dos dados pessoais do cliente é regido pela Política de Privacidade da Shivazen.</p>
+            
+            <h2>8. Disposições Finais</h2>
+            <p><strong>8.1.</strong> Estes Termos de Uso entram em vigor na data de sua publicação.</p>
+            <p><strong>8.2.</strong> Fica eleito o foro da Comarca de [Inserir Cidade/Estado] para dirimir quaisquer dúvidas ou litígios oriundos destes Termos, renunciando a qualquer outro, por mais privilegiado que seja.</p>
+        </div>
+    </div>
 {% endblock %}

@@ -2,6 +2,111 @@
 {% load static %}
 
 {% block conteudo %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        
+        .termo-consentimento {
+            text-align: justify;
+        }
+        
+        .termo-consentimento h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .termo-consentimento h2 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .termo-consentimento p {
+            margin-bottom: 15px;
+        }
+        
+        .termo-consentimento ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .termo-consentimento li {
+            margin-bottom: 5px;
+        }
+        
+        .dados-cliente {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .dados-cliente p {
+            margin: 8px 0;
+        }
+        
+        .checkbox-list {
+            margin: 15px 0;
+        }
+        
+        .checkbox-item {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .checkbox-item input {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .assinaturas {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .assinatura {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+        
+        .assinatura .linha {
+            border-top: 1px solid #333;
+            padding-top: 40px;
+            text-align: center;
+        }
+        
+        .py-5 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .assinatura {
+                width: 100%;
+            }
+        }
+    </style>
 <section class="hero-section">
   <div class="hero-container">
     <div class="hero-overlay">
@@ -14,8 +119,94 @@
     </div>
   </div>
 </section>
-<p>
-Cursus senectus sit ultricies maecenas, enim vitae non ultrices aptent cras dis sodales? Adipiscing elit gravida rutrum neque nec donec interdum risus nascetur. Nulla tincidunt lectus integer natoque fusce et justo aptent accumsan sociosqu ac aptent! Posuere eleifend dapibus est nunc dui. Viverra nullam tempor proin nunc ac venenatis sociosqu porttitor! Nisl nunc porta risus. Senectus nostra gravida euismod leo ultrices. Nunc dolor nascetur pharetra accumsan dolor. Blandit senectus orci eros. Fringilla molestie euismod lacinia posuere odio nascetur. Nascetur suspendisse hac bibendum dictum tristique ad. Odio arcu duis aliquet. Volutpat potenti placerat sollicitudin nullam cras bibendum ullamcorper dignissim, magnis.
-</p>
-</div>
+ <div class="container py-5">
+        <div class="termo-consentimento">
+            <h1>Termo de Consentimento Informado para Procedimento Estético</h1>
+            
+            <div class="dados-cliente">
+                <p><strong>Nome da Clínica:</strong> Shivazen</p>
+                <p><strong>Nome Completo do Cliente:</strong> _________________________________________</p>
+                <p><strong>RG/CPF:</strong> _________________________</p>
+                <p><strong>Data de Nascimento:</strong> ____/____/________</p>
+                <p><strong>Telefone:</strong> (___) _____-______</p>
+                <p><strong>Procedimento/Tratamento Proposto:</strong> _________________________________</p>
+                <p><strong>Área(s) do Corpo:</strong> _________________________________________________</p>
+            </div>
+            
+            <p>Eu, o(a) cliente devidamente qualificado(a) acima, por livre e espontânea vontade, declaro que fui informado(a) de maneira clara, detalhada e em linguagem acessível sobre o procedimento estético/tratamento <strong>[Nome do Procedimento]</strong> a ser realizado na clínica Shivazen.</p>
+            
+            <h2>1. Declaração de Informação Recebida</h2>
+            <p><strong>1.1. Natureza e Objetivos:</strong> Fui informado(a) sobre a natureza do procedimento, seus objetivos (o que se espera alcançar) e o número aproximado de sessões necessárias.</p>
+            <p><strong>1.2. Como é Feito:</strong> Recebi explicações sobre como o procedimento será realizado (uso de equipamentos, substâncias, método de aplicação).</p>
+            <p><strong>1.3. Resultados Esperados e Limitações:</strong> Entendi que os resultados estéticos são individuais, variam conforme meu organismo e que não há garantia de resultado perfeito ou específico, e que o procedimento possui limitações que me foram detalhadas.</p>
+            <p><strong>1.4. Alternativas:</strong> Fui informado(a) sobre as possíveis alternativas de tratamento para a minha condição.</p>
+            
+            <h2>2. Riscos, Efeitos Colaterais e Complicações</h2>
+            <p>Fui alertado(a) e entendi os riscos, efeitos colaterais comuns e as possíveis complicações do procedimento, que incluem, mas não se limitam a:</p>
+            <ul>
+                <li><strong>Efeitos Comuns e Temporários:</strong> Vermelhidão (eritema), inchaço (edema), hematomas, sensibilidade ou dor leve na área tratada, que geralmente desaparecem em <strong>[Definir Prazo, ex: 24 a 72]</strong> horas ou dias.</li>
+                <li><strong>Riscos e Complicações Potenciais:</strong> [Listar riscos específicos, ex: Discromias (alterações de cor da pele - hipo ou hiperpigmentação), Cicatrizes (em procedimentos invasivos), Reações alérgicas aos produtos utilizados, Queimaduras (em procedimentos a laser/eletroterapia), Infecções, Falha no resultado.]</li>
+            </ul>
+            
+            <h2>3. Contraindicações</h2>
+            <p>Fui questionado(a) e declarei não apresentar nenhuma das seguintes contraindicações (Marcar as relevantes para o procedimento):</p>
+            
+            <div class="checkbox-list">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="contra1">
+                    <label for="contra1">Gravidez ou amamentação.</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="contra2">
+                    <label for="contra2">Doenças crônicas descompensadas (ex: diabetes, hipertensão).</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="contra3">
+                    <label for="contra3">Uso de medicamentos fotossensibilizantes.</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="contra4">
+                    <label for="contra4">Infecções ou lesões ativas na área a ser tratada (ex: herpes, acne inflamatória).</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="contra5">
+                    <label for="contra5">Histórico de queloides ou cicatrização anormal.</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="contra6">
+                    <label for="contra6">[Outras contraindicações específicas do procedimento]</label>
+                </div>
+            </div>
+            
+            <p>Declaro que informei ao profissional toda e qualquer condição médica ou uso de medicamentos/suplementos que possam interferir no tratamento.</p>
+            
+            <h2>4. Cuidados Pré e Pós-Procedimento</h2>
+            <p>Comprometo-me a seguir rigorosamente todas as orientações do profissional antes e depois do procedimento, incluindo:</p>
+            <ul>
+                <li>[Ex: Evitar exposição solar antes e depois do tratamento.]</li>
+                <li>[Ex: Utilizar protetor solar diariamente.]</li>
+                <li>[Ex: Não utilizar maquiagem/cremes por X horas.]</li>
+                <li>[Ex: Uso de medicamentos ou cremes específicos prescritos.]</li>
+                <li>[Ex: Retorno em X dias para avaliação, se necessário.]</li>
+            </ul>
+            
+            <h2>5. Consentimento</h2>
+            <p>Declaro que li, compreendi todas as informações contidas neste termo, tive a oportunidade de fazer perguntas e todas as minhas dúvidas foram satisfatoriamente esclarecidas pelo profissional da Shivazen. Estou ciente dos riscos, benefícios, alternativas e limitações, e, por isso, AUTORIZO a realização do procedimento proposto por minha livre e espontânea vontade.</p>
+            
+            <div class="assinaturas">
+                <div class="assinatura">
+                    <p><strong>Local e Data:</strong> _______________________, _____ de _________________ de _______</p>
+                    <div class="linha">
+                        <p>Assinatura do(a) Cliente / Responsável Legal</p>
+                    </div>
+                </div>
+                
+                <div class="assinatura">
+                    <div class="linha">
+                        <p>Nome e Assinatura do Profissional Responsável<br>(Esteticista, Biomédico, etc.)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
